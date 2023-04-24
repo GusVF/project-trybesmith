@@ -13,6 +13,12 @@ async function createProductController(req: Request, res: Response) {
   return res.status(201).json(newProduct);
 }
 
+async function findAllController(_req: Request, res: Response) {
+  const products = await productService.findAllService();
+  return res.status(200).json(products);
+}
+
 export default {
   createProductController,
+  findAllController,
 };
