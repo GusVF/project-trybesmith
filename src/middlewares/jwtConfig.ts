@@ -1,7 +1,7 @@
 export const secret = 'trybe';
 
 export const config: object = {
-  expiresIn: '30d',
+  expiresIn: '630d',
   algorithm: 'HS256',
 };
 
