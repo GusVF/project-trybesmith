@@ -4,10 +4,19 @@ import { NewUser } from '../Interfaces/user';
 
 async function newUserController(req: Request, res: Response) {
   const user = req.body as NewUser;
-  const newUser = await userService.newUserService(user);
-  if (!newUser) {
-    return res.status(401).json({ message: 'All fields are required' });
+  if (!user.username) {
+    return res.status(400).json({ message: '"username" is required' });
   }
+  if (!user.vocation) {
+    return res.status(400).json({ message: '"vocation" is required' });
+  }
+  if (user.level === undefined) {
+    return res.status(400).json({ message: '"level" is required' });
+  }
+  if (!user.password) {
+    return res.status(400).json({ message: '"password" is required' });
+  }
+  const newUser = await userService.newUserService(user);
   return res.status(201).json({ token: newUser });
 }
 
