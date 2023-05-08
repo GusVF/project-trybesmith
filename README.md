@@ -1,13 +1,15 @@
-# :construction: README customizado em construção ! :construction:
-<!-- Olá, Tryber!
-Esse é apenas um arquivo inicial para o README do seu projeto no qual você pode customizar e reutilizar todas as vezes que for executar o trybe-publisher.
+# Projeto TrybeSmith
 
-Para deixá-lo com a sua cara, basta alterar o seguinte arquivo da sua máquina: ~/.student-repo-publisher/custom/_NEW_README.md
+## O que foi desenvolvido?
 
-É essencial que você preencha esse documento por conta própria, ok?
-Não deixe de usar nossas dicas de escrita de README de projetos, e deixe sua criatividade brilhar!
-:warning: IMPORTANTE: você precisa deixar nítido:
-- quais arquivos/pastas foram desenvolvidos por você; 
-- quais arquivos/pastas foram desenvolvidos por outra pessoa estudante;
-- quais arquivos/pastas foram desenvolvidos pela Trybe.
--->
+Ness projeto desenvolvi todas as camadas da aplicação (Models, Service e Controllers) em meu código e, por meio dessa aplicação, foi possível realizar as operações básicas que se pode fazer em um determinado banco de dados: Criação, Leitura, Atualização e Exclusão.
+
+
+## O que preciso saber para fazer o projeto?
+
+- [x] Como trabalhar com tipagem na definição de variáveis e parâmetros.
+- [x] Como definir interfaces/types
+- [x] Como trabalhar com tipagem para definir o retorno das funções
+- [x] Como trabalhar com Generics para trabalhar com funções genéricas.
+- [x] Como trabalhar com classes e objetos (opcional mas fortemente recomendado)
+- [x] Como aplicar typescript em uma aplicação MSC com Express e MySQL2
