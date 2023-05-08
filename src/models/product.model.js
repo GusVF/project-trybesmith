@@ -75,23 +75,13 @@ function findAllModel() {
         });
     });
 }
-function updateProduct(orderId, id) {
-    return __awaiter(this, void 0, void 0, function () {
-        var query;
-        return __generator(this, function (_a) {
-            switch (_a.label) {
-                case 0:
-                    query = 'UPDATE Trybesmith.order SET order_id = ? WHERE id = ?';
-                    return [4 /*yield*/, connection_1.default.execute(query, [orderId, id])];
-                case 1:
-                    _a.sent();
-                    return [2 /*return*/];
-            }
-        });
-    });
-}
+// async function updateProduct(orderId: number[]) {
+//   const query = 'UPDATE Trybesmith.orders SET order_id = ? WHERE id = ?';
+//   const result = await connection.execute<ResultSetHeader>(query, [orderId]);
+//   console.log(result);
+// }
 exports.default = {
     createProductModel: createProductModel,
     findAllModel: findAllModel,
-    updateProduct: updateProduct,
+    // updateProduct,
 };

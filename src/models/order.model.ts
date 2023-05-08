@@ -1,4 +1,4 @@
-import { RowDataPacket, ResultSetHeader } from 'mysql2';
+import { RowDataPacket } from 'mysql2';
 import connection from './connection';
 import { Order } from '../Interfaces/order';
 
@@ -12,16 +12,7 @@ async function findAllOrdersModel(): Promise<Order[] | null> {
   if (!rows) return null;
   return rows as Order[];
 }
-// funcoes para o requisito 8 ------------------>
-async function newOrderModel(userId: number | string): Promise<object> {
-  const query = 'INSERT INTO Trybesmith.orders (user_id) VALUES (?)';
-  const [rows] = await connection.execute<ResultSetHeader>(query, [userId]);
-  const { insertId: id } = rows;
-  const newOrder = { id, userId };
-  return newOrder;
-}
 
 export default {
   findAllOrdersModel,
-  newOrderModel,
 };
