@@ -4,7 +4,7 @@ export interface NewProduct {
 }
 
 export interface Product extends NewProduct {
-  id: number,
+  id?: number,
 }
 
 export default Product;

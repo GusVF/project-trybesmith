@@ -1,0 +1,24 @@
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var express_1 = __importDefault(require("express"));
+var product_controller_1 = __importDefault(require("./controllers/product.controller"));
+var user_controller_1 = __importDefault(require("./controllers/user.controller"));
+var order_controller_1 = __importDefault(require("./controllers/order.controller"));
+require("express-async-errors");
+var validateUser_1 = __importDefault(require("./middlewares/validateUser"));
+var productMiddleware_1 = __importDefault(require("./middlewares/productMiddleware"));
+var newUserMiddleware_1 = __importDefault(require("./middlewares/newUserMiddleware"));
+var app = (0, express_1.default)();
+app.use(express_1.default.json());
+app.post('/products', product_controller_1.default.createProductController);
+app.use(productMiddleware_1.default);
+app.get('/products', product_controller_1.default.findAllController);
+app.post('/users', user_controller_1.default.newUserController);
+app.use(newUserMiddleware_1.default);
+app.get('/orders', order_controller_1.default.findAllOrdersController);
+app.post('/login', user_controller_1.default.loginController);
+app.use(validateUser_1.default);
+exports.default = app;

@@ -21,7 +21,14 @@ async function findAllModel(): Promise<Product[]> {
   return rows as Product[];
 }
 
+// async function updateProduct(orderId: number[]) {
+//   const query = 'UPDATE Trybesmith.orders SET order_id = ? WHERE id = ?';
+//   const result = await connection.execute<ResultSetHeader>(query, [orderId]);
+//   console.log(result);
+// }
+
 export default {
   createProductModel,
   findAllModel,
+  // updateProduct,
 };

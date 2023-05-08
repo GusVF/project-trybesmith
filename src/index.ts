@@ -1,12 +1,14 @@
 import app from './app';
 // import orderModel from './models/order.model';
+// import productModel from './models/product.model';
+// import orderService from './services/order.service';
 
-// async function Main(id: number) {
-//   const user = await orderModel(id);
+// async function Main(orderId: number[]) {
+//   const user = await productModel.updateProduct(orderId);
 //   console.log(user);
 // }
 
-// Main(1);
+// Main([3]);
 
 const PORT = 3001;
 

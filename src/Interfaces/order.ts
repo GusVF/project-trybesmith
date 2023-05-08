@@ -3,5 +3,3 @@ export interface Order {
   userId: number,
   productId: number[];
 }
-
-export default Order;
